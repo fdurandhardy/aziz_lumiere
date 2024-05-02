@@ -1,0 +1,28 @@
+const w = 640;
+const h = w;
+
+function setup() {
+    createCanvas(w, h);
+    colorMode(HSL, 360, 100, 100, 100);
+    
+    noLoop();
+    frameRate(15);
+
+    background(0, 0, 0, 100);
+    noStroke();
+
+    translate(w/2, h/2);
+
+    blendMode(ADD);
+    for (let r = 0.0; r < 0.5; r += 0.01) {
+	// Green
+
+	// fill(120, 90, 5, 100);
+	// circle(w * 0.6, h * 0.4, w * r);
+
+  strokeWeight(r/4*w);
+  stroke(120, 90, 5, 100);
+  noFill();
+  arc(0, 0, 200, 200, 0, Math.PI*2);
+    }
+}
